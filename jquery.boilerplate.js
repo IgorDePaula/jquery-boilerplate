@@ -1,4 +1,4 @@
-;(function ( $, window, document, undefined ) {
+(function ($) {
     var pluginName = 'defaultPluginName',
         defaults = {
             propertyName: "value"
@@ -24,6 +24,6 @@
                 $.data(this, 'plugin_' + pluginName, new Plugin( this, options ));
             }
         });
-    }
+    };
 
-})(jQuery, window, document);
+}(jQuery));
