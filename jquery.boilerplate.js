@@ -1,16 +1,13 @@
 (function ($) {
+    'use strict';
     var pluginName = 'defaultPluginName',
         defaults = {
             propertyName: "value"
         };
 
-    function Plugin( element, options ) {
+    function Plugin(element, options) {
         this.element = element;
-        this.options = $.extend( {}, defaults, options) ;
-        
-        this._defaults = defaults;
-        this._name = pluginName;
-        
+        this.options = $.extend({}, defaults, options);
         this.init();
     }
 
@@ -18,10 +15,10 @@
 
     };
 
-    $.fn[pluginName] = function ( options ) {
+    $.fn[pluginName] = function (options) {
         return this.each(function () {
             if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName, new Plugin( this, options ));
+                $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
             }
         });
     };
