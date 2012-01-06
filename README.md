@@ -10,5 +10,5 @@
 - Add missing semicolon to end of wrapper function
 - Remove options and name assignment to plugin object
 - Remove extra spaces
-- Add 'use string'
+- Add 'use strict'
 - Passes JSLint
